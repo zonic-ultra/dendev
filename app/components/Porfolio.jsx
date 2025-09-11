@@ -13,6 +13,8 @@ const Portfolio = () => {
       description: "Capstone Project",
       image: "/assets/capstone_project.png",
       tags: [RiJavaFill, SiTensorflow, SiSqlite, DiIllustrator],
+      github: "https://github.com/yourusername/hirebase", // 🔗 replace with your link
+      live: "https://hirebase-demo.com",
     },
     {
       id: 2,
@@ -20,6 +22,8 @@ const Portfolio = () => {
       description: "Fullstack Project",
       image: "/assets/hirebase_design.png",
       tags: [RiJavaFill, SiSpringboot, SiDocker, DiPostgresql, DiReact],
+      github: "https://github.com/yourusername/hirebase", // 🔗 replace with your link
+      live: "https://hirebase-demo.com", // 🔗 replace with your live demo
     },
   ];
 
@@ -33,10 +37,6 @@ const Portfolio = () => {
         <h2 className="text-gradient text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
           My Featured Projects
         </h2>
-        <p className="text-white-600 max-w-xl mx-auto">
-          Here are some of the projects I have worked on using different
-          technologies.
-        </p>
       </div>
 
       {/* Project grid */}
@@ -44,7 +44,7 @@ const Portfolio = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border custom-gradient flex flex-col"
+            className="rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-black flex flex-col custom-gradient"
           >
             {/* Project Image */}
             <img
@@ -54,28 +54,50 @@ const Portfolio = () => {
             />
 
             {/* Project Content */}
-            <div className="p-3 flex flex-col flex-1">
+            <div className="p-4 flex flex-col flex-1">
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((Icon, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-black opacity-80 text-xl rounded-full border border-gray-300 flex items-center justify-center"
+                    className="px-3 py-1 border border-gray-500 text-white text-lg rounded-full flex items-center justify-center"
                   >
                     <Icon />
                   </span>
                 ))}
               </div>
 
-              {/* Title + Button */}
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  {project.title}
-                </h3>
-              </div>
+              {/* Title */}
+              <h3 className="text-lg md:text-xl font-semibold text-white-900 mb-2">
+                {project.title}
+              </h3>
 
               {/* Description */}
-              <p className="text-gray-600">{project.description}</p>
+              <p className="text-white opacity-70 mb-4">
+                {project.description}
+              </p>
+
+              {/* Buttons (only for HireBase) */}
+              {project.github && project.live && (
+                <div className="flex gap-3 mt-auto">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-1 text-white text-sm rounded-full hover:bg-gray-900 transition"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 text-white text-sm border-1 rounded-full hover:bg-gray-900 transition"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}

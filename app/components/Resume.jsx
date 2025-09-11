@@ -2,6 +2,20 @@ import React from "react";
 import { GiFallingStar, GiUpgrade } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
 
+import {
+  SiDocker,
+  SiMariadb,
+  SiSpringboot,
+  SiCanva,
+} from "react-icons/si";
+import {
+  RiJavaFill,
+  RiJavascriptLine,
+} from "react-icons/ri";
+import { GrHtml5 } from "react-icons/gr";
+import { DiCss3, DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
+import { FaGitAlt } from "react-icons/fa";
+
 const Resume = () => {
   const education = [
     {
@@ -63,6 +77,24 @@ const Resume = () => {
         </>
       ),
     },
+  ];
+
+  const techStack = [
+    { icon: <GrHtml5 />, name: "HTML" },
+    { icon: <DiCss3 />, name: "CSS" },
+    { icon: <RiJavascriptLine />, name: "JavaScript" },
+    { icon: <RiJavaFill />, name: "Java" },
+    { icon: <SiSpringboot />, name: "Spring Boot" },
+    { icon: <SiDocker />, name: "Docker" },
+    { icon: <DiReact />, name: "React" },
+    { icon: <DiPostgresql />, name: "PostgreSQL" },
+    { icon: <SiMariadb />, name: "MariaDB" },
+    { icon: <FaGitAlt />, name: "Git" },
+  ];
+
+  const uiux = [
+    { uiuxt: <DiIllustrator />, name: "Adobe Illustrator" },
+    { uiuxt: <SiCanva />, name: "Canva" },
   ];
 
   return (
@@ -155,6 +187,49 @@ const Resume = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      {/* tech stack */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+        {/* Tech Stack */}
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold mb-8">Tech Stack</h3>
+          <div className="relative">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {techStack.map((icon, index) => (
+                <div
+                  key={index}
+                  className="relative flex items-start space-x-2 pb-3"
+                >
+                  <span className="text-sm md:text-4xl">{icon.icon}</span>
+                  <span className="text-xs md:text-sm opacity-80">
+                    {icon.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* UI/UX Tools */}
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold mb-8">UI/UX Tools</h3>
+          <div className="relative">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {uiux.map((uiuxicon, index) => (
+                <div
+                  key={index}
+                  className="relative flex items-start space-x-2 pb-3"
+                >
+                  <span className="text-sm md:text-4xl">{uiuxicon.uiuxt}</span>
+                  <span className="text-xs md:text-sm opacity-80">
+                    {uiuxicon.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

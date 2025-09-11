@@ -1,6 +1,7 @@
 "use client";
 
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Porfolio from "./components/Porfolio";
@@ -14,6 +15,7 @@ export default function Home() {
       <Porfolio />
       <About />
       <Resume />
+      <Contact />
       {/* <div className="absolute inset-0">
         <div className="absolute left-1/4 top-0 h-full w-[2px] bg-gradient-to-b from-cyan-400/70 via-transparent to-transparent animate-[glowline_4s_linear_infinite]"></div>
         <div className="absolute left-2/4 top-0 h-full w-[2px] bg-gradient-to-b from-purple-400/70 via-transparent to-transparent animate-[glowline_6s_linear_infinite]"></div>

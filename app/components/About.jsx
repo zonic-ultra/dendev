@@ -13,8 +13,8 @@ const About = () => {
           About
         </p>
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient mb-8">
-          Server-side <br />
-          Logic
+          I build reliable server-side logic <br />
+          to support today’s digital solutions.
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
