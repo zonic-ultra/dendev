@@ -28,7 +28,7 @@ const NavBar = () => {
         </a>
 
         {/* nav links */}
-        <div className="hidden min-[825px]:flex items-center gap-4 bg-base shadow-lg opacity-80 px-8 py-3 rounded-full">
+        <div className="custom-gradient hidden min-[825px]:flex items-center gap-4 bg-base shadow-lg opacity-80 px-8 py-3 rounded-full">
           {navLinks.map((link, index) => (
             <a
               href={link.href}
@@ -52,7 +52,7 @@ const NavBar = () => {
         <button
           onClick={toggleMenu}
           aria-label="Toggle Menu"
-          className="min-[825px]:hidden p-2 text-content-700 hover:text-content-alter transition-colors"
+          className=" min-[825px]:hidden p-2 text-content-700 hover:text-content-alter transition-colors"
         >
           {isMenuOpen ? (
             <div>

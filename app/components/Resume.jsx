@@ -2,16 +2,8 @@ import React from "react";
 import { GiFallingStar, GiUpgrade } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
 
-import {
-  SiDocker,
-  SiMariadb,
-  SiSpringboot,
-  SiCanva,
-} from "react-icons/si";
-import {
-  RiJavaFill,
-  RiJavascriptLine,
-} from "react-icons/ri";
+import { SiDocker, SiMariadb, SiSpringboot, SiCanva } from "react-icons/si";
+import { RiJavaFill, RiJavascriptLine } from "react-icons/ri";
 import { GrHtml5 } from "react-icons/gr";
 import { DiCss3, DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa";
@@ -203,8 +195,10 @@ const Resume = () => {
                   key={index}
                   className="relative flex items-start space-x-2 pb-3"
                 >
-                  <span className="text-sm md:text-4xl">{icon.icon}</span>
-                  <span className="text-xs md:text-sm opacity-80">
+                  <span className="custom-gradient text-sm md:text-2xl">
+                    {icon.icon}
+                  </span>
+                  <span className="text-sm md:text-sm opacity-70">
                     {icon.name}
                   </span>
                 </div>
@@ -223,8 +217,10 @@ const Resume = () => {
                   key={index}
                   className="relative flex items-start space-x-2 pb-3"
                 >
-                  <span className="text-sm md:text-4xl">{uiuxicon.uiuxt}</span>
-                  <span className="text-xs md:text-sm opacity-80">
+                  <span className=" custom-gradient text-sm md:text-2xl">
+                    {uiuxicon.uiuxt}
+                  </span>
+                  <span className="text-sm md:text-sm opacity-70">
                     {uiuxicon.name}
                   </span>
                 </div>

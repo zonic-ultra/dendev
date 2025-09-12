@@ -17,15 +17,15 @@ const About = () => {
           to support today’s digital solutions.
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* <div className="bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
           <h3 className="text-5xl md:text-6xl font-bold text-gradient mb-2">
             0+
           </h3>
           <p className="text-white-700 font-medium text-lg opacity-80">
             Happy clients
           </p>
-        </div>
+        </div> */}
         <div className="bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
           <h3 className="text-5xl md:text-6xl font-bold text-gradient mb-2">
             1+
