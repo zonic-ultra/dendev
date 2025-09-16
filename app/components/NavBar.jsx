@@ -42,7 +42,7 @@ const NavBar = () => {
         {/* desktop */}
         <a
           href="#"
-          className="hidden min-[825px]:flex text-[16px] font-semibold custom-gradient py-3 px-8 text-content rounded-full items-center gap-2 hover:opacity-90 transition-opacity"
+          className="hidden min-[825px]:flex text-[16px] font-semibold custom-gradient py-3 px-8 rounded-full items-center gap-2 hover:opacity-90 transition-opacity"
         >
           AI
           <SiChatbot className="text-lg" />

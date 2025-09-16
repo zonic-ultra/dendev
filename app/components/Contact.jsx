@@ -21,7 +21,7 @@ const Contact = () => {
 
     const data = await res.json();
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Message Sent Successfully");
       event.target.reset();
 
       // remove message after 5 seconds
@@ -56,7 +56,7 @@ const Contact = () => {
             id=""
             placeholder="Your name"
             required
-            className="border-b-2 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
+            className="border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           />
           <input
             type="email"
@@ -64,19 +64,19 @@ const Contact = () => {
             id=""
             placeholder="Email Address"
             required
-            className="border-b-2 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
+            className="border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           />
         </div>
 
         {/* right side */}
-        <div className="text-sm md:text-lg flex flex-col space-y-6">
+        <div className="text-sm md:text-lg flex flex-col space-y-6 p-">
           <input
             type="text"
             name="Campany"
             id=""
             placeholder="Company name"
             required
-            className="border-b-2 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
+            className="border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           />
           <input
             type="tel"
@@ -84,7 +84,7 @@ const Contact = () => {
             id=""
             placeholder="Phon number"
             required
-            className="border-b-2 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
+            className="border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           />
         </div>
         {/* text area */}
@@ -95,7 +95,7 @@ const Contact = () => {
             id=""
             placeholder="Few words"
             required
-            className="w-full border-b-2 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
+            className=" text-sm md:text-lg w-full border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           ></textarea>
         </div>
         <div className="md:col-span-2">

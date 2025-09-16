@@ -1,7 +1,7 @@
 import React from "react";
 import { HiDownload, HiLocationMarker, HiPhone, HiUser } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
-import { FaLinkedin } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
 import { GiFallingStar } from "react-icons/gi";
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
             Happy clients
           </p>
         </div> */}
-        <div className="bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
+        <div className="custom-gradient bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
           <h3 className="text-5xl md:text-6xl font-bold text-gradient mb-2">
             1+
           </h3>
@@ -34,7 +34,7 @@ const About = () => {
             Years of experience
           </p>
         </div>
-        <div className="bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
+        <div className="custom-gradient bg-white/10  back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
           <h3 className="text-5xl md:text-6xl font-bold text-gradient mb-2">
             4+
           </h3>
@@ -94,13 +94,13 @@ const About = () => {
             </p>
             <p className="text-xl font-semibold opacity-70">+63 9516240293</p>
           </div>
-          <div>
+          {/* <div>
             <p className="text-sm font-medium mb-1">
               <FaLinkedin className="inline-block text-lg" />
               <span className="ml-2">LinkedIn</span>
             </p>
             <p className="text-xl font-semibold opacity-70">Judens bandal</p>
-          </div>
+          </div> */}
           <div>
             <p className="text-sm font-medium mb-1">
               <HiEnvelope className="inline-block text-lg" />

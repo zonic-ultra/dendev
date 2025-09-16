@@ -67,10 +67,10 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto mt-5">
           <a
-            href="#contact"
+            href="#portfolio"
             className="w-full md:w-auto py-3 px-8 rounded-full font-semibold flex items-center justify-center gap-2 border border-content/20 hover:border-content/40 hover:shadow-lg transition-colors duration-300 cursor-pointer"
           >
-            Contact Info
+            My Work
           </a>
 
           <a
