@@ -1,13 +1,19 @@
 import React from "react";
 import { HiDownload, HiLocationMarker, HiPhone, HiUser } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
-// import { FaLinkedin } from "react-icons/fa";
 import { GiFallingStar } from "react-icons/gi";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section className="mt-12 pb-8" id="about">
-      <div className="text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
         <p className="font-semibold inline-flex items-center gap-1 py-1.5  text-purple-600 px-3 mb-4">
           <GiFallingStar className="text-lg" />
           About
@@ -16,7 +22,7 @@ const About = () => {
           I build reliable server-side logic <br />
           to support today’s digital solutions.
         </h2>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {/* <div className="bg-white/10 back-drop-blur-sm rounded-3xl p-8 text-center border border-outer">
           <h3 className="text-5xl md:text-6xl font-bold text-gradient mb-2">

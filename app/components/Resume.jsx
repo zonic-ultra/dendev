@@ -184,7 +184,7 @@ const Resume = () => {
       </div>
       {/* tech stack */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 mt-5">
         {/* Tech Stack */}
         <div>
           <h3 className="text-xl md:text-2xl font-bold mb-8">Tech Stack</h3>

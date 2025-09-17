@@ -4,7 +4,30 @@ import { SiDocker, SiSpringboot, SiSqlite } from "react-icons/si";
 import { DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
 import { SiTensorflow } from "react-icons/si";
 import { GiFallingStar } from "react-icons/gi";
+import { motion } from "framer-motion";
 
+const conatainer = {
+  hidden: {},
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const card = {
+  hidden: { opacity: 0, y: 60, rotateX: -10 },
+  show: {
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 const Portfolio = () => {
   const projects = [
     {
@@ -29,7 +52,13 @@ const Portfolio = () => {
 
   return (
     <section className="my-12 px-4 md:px-8 lg:px-16" id="portfolio">
-      <div className="text-center mb-10">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-10"
+      >
         <p className="font-semibold inline-flex items-center gap-2 text-purple-600">
           <GiFallingStar className="text-lg" />
           Portfolio
@@ -37,24 +66,44 @@ const Portfolio = () => {
         <h2 className="text-gradient text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
           My Featured Projects
         </h2>
-      </div>
+      </motion.div>
 
       {/* Project grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <motion.div
+        variants={conatainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
         {projects.map((project) => (
-          <div
+          <motion.div
+            variants={card}
+            whileHover={{ scale: 1.03, rotateY: 3 }}
+            transition={{ type: "spring", stiffness: 120, damping: 12 }}
             key={project.id}
             className="rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-black flex flex-col custom-gradient"
           >
             {/* Project Image */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-56 md:h-72 object-cover rounded-t-2xl"
-            />
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
+              className="relative overflow-hidden"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-56 md:h-72 object-cover rounded-t-2xl p-2"
+              />
+            </motion.div>
 
             {/* Project Content */}
-            <div className="p-4 flex flex-col flex-1">
+            <motion.div
+              variants={conatainer}
+              initial="hidden"
+              animate="show"
+              className="p-4 flex flex-col flex-1"
+            >
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((Icon, index) => (
@@ -98,10 +147,10 @@ const Portfolio = () => {
                   </a>
                 </div>
               )}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
