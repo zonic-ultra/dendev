@@ -145,27 +145,73 @@ const Resume = () => {
               >
                 {/* timeline dot with icon */}
                 <div className="relative flex-shrink-0">
-                  <div className="w-8 h-8 custom-gradient rounded-full flex items-center justify-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="w-8 h-8 custom-gradient rounded-full flex items-center justify-center"
+                  >
                     <PiGraduationCap className="w-4 h-4 text-white" />
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* details */}
-                <div className="flex-1 min-w-0">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="flex-1 min-w-0"
+                >
                   <div className="flex items-center space-x-2 mb-2">
-                    <span className="text-sm font-medium custom-gradient px-2 py-1 rounded mb-2">
+                    <motion.span
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.3 }}
+                      viewport={{ once: true }}
+                      className="text-sm font-medium custom-gradient px-2 py-1 rounded mb-2"
+                    >
                       {item.year}
-                    </span>
+                    </motion.span>
                   </div>
-                  <h4 className="text-lg opacity-70 font-medium mb-1">
+                  <motion.h4
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-lg opacity-70 font-medium mb-1"
+                  >
                     {item.instatution}
-                  </h4>
-                  <p className="opacity-80 mb-1">
+                  </motion.h4>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className="opacity-80 mb-1"
+                  >
                     {item.course || item.gradeLevel}
-                  </p>
-                  <p className="opacity-70 mb-1">{item.specialization}</p>
-                  <p className="opacity-60 italic text-sm">{item.honor}</p>
-                </div>
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="opacity-70 mb-1"
+                  >
+                    {item.specialization}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
+                    viewport={{ once: true }}
+                    className="opacity-60 italic text-sm"
+                  >
+                    {item.honor}
+                  </motion.p>
+                </motion.div>
               </motion.div>
             ))}
           </div>
@@ -191,24 +237,64 @@ const Resume = () => {
               >
                 {/* timeline dot with icon */}
                 <div className="relative flex-shrink-0">
-                  <div className="w-8 h-8 custom-gradient rounded-full flex items-center justify-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="w-8 h-8 custom-gradient rounded-full flex items-center justify-center"
+                  >
                     <GiUpgrade className="w-4 h-4 text-white" />
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* details */}
-                <div className="flex-1 min-w-0">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="flex-1 min-w-0"
+                >
                   <div className="flex items-center space-x-2 mb-2">
-                    <span className="text-sm font-medium custom-gradient px-2 py-1 rounded mb-2">
+                    <motion.span
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.3 }}
+                      viewport={{ once: true }}
+                      className="text-sm font-medium custom-gradient px-2 py-1 rounded mb-2"
+                    >
                       {item.year}
-                    </span>
+                    </motion.span>
                   </div>
-                  <h4 className="text-lg opacity-70 font-medium mb-2">
+                  <motion.h4
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-lg opacity-70 font-medium mb-2"
+                  >
                     {item.what}
-                  </h4>
-                  <p className="opacity-80 mb-2">{item.title}</p>
-                  <p className="opacity-60 text-sm">{item.description}</p>
-                </div>
+                  </motion.h4>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className="opacity-80 mb-2"
+                  >
+                    {item.title}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="opacity-60 text-sm"
+                  >
+                    {item.description}
+                  </motion.p>
+                </motion.div>
               </motion.div>
             ))}
           </div>
