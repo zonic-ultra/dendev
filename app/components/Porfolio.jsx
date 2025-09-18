@@ -32,12 +32,14 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Android-based External Disease Identifier",
+      title:
+        "Android-based External Disease Identifier for UEP College of Veterinary Medicine Laboratory",
       description: "Capstone Project",
       image: "/assets/capstone_project.png",
       tags: [RiJavaFill, SiTensorflow, SiSqlite, DiIllustrator],
-      github: "https://github.com/yourusername/hirebase", // 🔗 replace with your link
-      live: "https://hirebase-demo.com",
+      github:
+        "https://github.com/zonic-ultra/Android-based-External-Disease-Identifier", // 🔗 replace with your link
+      live: "",
     },
     {
       id: 2,
@@ -45,8 +47,8 @@ const Portfolio = () => {
       description: "Fullstack Project",
       image: "/assets/hirebase_design.png",
       tags: [RiJavaFill, SiSpringboot, SiDocker, DiPostgresql, DiReact],
-      github: "https://github.com/yourusername/hirebase", // 🔗 replace with your link
-      live: "https://hirebase-demo.com", // 🔗 replace with your live demo
+      github: "https://github.com/zonic-ultra/ems-frontend-react", // 🔗 replace with your link
+      live: "https://employee-management-system-blue-five.vercel.app/", // 🔗 replace with your live demo
     },
   ];
 
@@ -117,7 +119,7 @@ const Portfolio = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg md:text-xl font-semibold text-white-900 mb-2">
+              <h3 className="text-sm md:text-xl font-semibold text-white-900 mb-2">
                 {project.title}
               </h3>
 

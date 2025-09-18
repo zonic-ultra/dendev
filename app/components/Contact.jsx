@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { GiFallingStar } from "react-icons/gi";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -33,9 +34,24 @@ const Contact = () => {
       setResult(data.message);
     }
   };
+
+  const conatiner = {
+    hidden: {},
+    show: { transition: { staggerChidren: 0.2 } },
+  };
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
   return (
     <section className="mt-12 pb-8" id="contact">
-      <div className="text-center mb-10">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
         <p className="font-semibold inline-flex items-center gap-2 text-purple-600">
           <GiFallingStar className="text-lg" />
           Contact
@@ -43,14 +59,19 @@ const Contact = () => {
         <h2 className="text-gradient text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
           Let’s turn ideas <br /> into reality
         </h2>
-      </div>
+      </motion.div>
       {/* conatct form */}
-      <form
+      <motion.form
+        variants={conatiner}
+        initial="hidden"
+        whileInView="show"
         onSubmit={onSubmit}
-        className="max-w-4xl max-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4 text-xl font-semibold mb-5"
+        className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4 text-xl font-semibold mb-5"
       >
         <div className="text-sm md:text-lg flex flex-col space-y-6">
-          <input
+          <motion.input
+            variants={item}
+            whileFocus={{ scale: 1.02 }}
             type="text"
             name="name"
             id=""
@@ -58,7 +79,9 @@ const Contact = () => {
             required
             className="border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           />
-          <input
+          <motion.input
+            variants={item}
+            whileFocus={{ scale: 1.02 }}
             type="email"
             name="email"
             id=""
@@ -70,7 +93,9 @@ const Contact = () => {
 
         {/* right side */}
         <div className="text-sm md:text-lg flex flex-col space-y-6 p-">
-          <input
+          <motion.input
+            variants={item}
+            whileFocus={{ scale: 1.02 }}
             type="text"
             name="Campany"
             id=""
@@ -78,7 +103,9 @@ const Contact = () => {
             required
             className="border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
           />
-          <input
+          <motion.input
+            variants={item}
+            whileFocus={{ scale: 1.02 }}
             type="tel"
             name="Phone"
             id=""
@@ -90,24 +117,28 @@ const Contact = () => {
         {/* text area */}
 
         <div className="md:col-span-2">
-          <textarea
+          <motion.textarea
+            variants={item}
+            whileFocus={{ scale: 1.02 }}
             name="message"
             id=""
             placeholder="Few words"
             required
             className=" text-sm md:text-lg w-full border-b-1 border-outer bg-transparent focus:outline-none focus:border-green-400 py-3"
-          ></textarea>
+          ></motion.textarea>
         </div>
         <div className="md:col-span-2">
-          <button
+          <motion.button
+            variants={item}
+            whileFocus={{ scale: 1.05 }}
             type="submit"
             className="text-sm md:text-lg mt-6 custom-gradient border rounded-full border-green-300 py-3 px-6 flex items-center gap-2 hover:text-green-400"
           >
             Send Message
             <FaPaperPlane className="text-green-400 inline-block" />
-          </button>
+          </motion.button>
         </div>
-      </form>
+      </motion.form>
       <span className="max-w-4xl max-auto  p-5 items-center justify-center ">
         {result}
       </span>

@@ -2,11 +2,14 @@ import React from "react";
 import { GiFallingStar, GiUpgrade } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
 
-import { SiDocker, SiMariadb, SiSpringboot, SiCanva } from "react-icons/si";
+import { SiMariadb, SiSpringboot, SiCanva } from "react-icons/si";
 import { RiJavaFill, RiJavascriptLine } from "react-icons/ri";
 import { GrHtml5 } from "react-icons/gr";
 import { DiCss3, DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+
+import { motion } from "framer-motion";
 
 const Resume = () => {
   const education = [
@@ -77,8 +80,8 @@ const Resume = () => {
     { icon: <RiJavascriptLine />, name: "JavaScript" },
     { icon: <RiJavaFill />, name: "Java" },
     { icon: <SiSpringboot />, name: "Spring Boot" },
-    { icon: <SiDocker />, name: "Docker" },
     { icon: <DiReact />, name: "React" },
+    { icon: <RiTailwindCssFill />, name: "Tailwind" },
     { icon: <DiPostgresql />, name: "PostgreSQL" },
     { icon: <SiMariadb />, name: "MariaDB" },
     { icon: <FaGitAlt />, name: "Git" },
@@ -89,10 +92,24 @@ const Resume = () => {
     { uiuxt: <SiCanva />, name: "Canva" },
   ];
 
+  // const conatiner = {
+  //   hidden: {},
+  //   show: { transition: { staggerChidren: 0.2 } },
+  // };
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
   return (
     <section className="mt-12 pb-8" id="resume">
       {/* header */}
-      <div className="text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
         <p className="font-semibold inline-flex items-center gap-1 py-1.5 px-3  text-purple-600 mb-4">
           <GiFallingStar className="text-lg" />
           Resume
@@ -102,21 +119,28 @@ const Resume = () => {
           <br />
           Experience
         </h2>
-      </div>
+      </motion.div>
 
       {/* content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 space-y-12">
         {/* education timeline */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-8">Education</h3>
           <div className="relative">
             {/* vertical line */}
             <div className="absolute left-4 top-0 bottom-0 w-0.5 custom-gradient opacity-60" />
 
             {education.map((item, index) => (
-              <div
+              <motion.div
                 className="relative flex items-start space-x-6 pb-8"
                 key={index}
+                varients={item}
+                whileHover={{ x: 10 }}
               >
                 {/* timeline dot with icon */}
                 <div className="relative flex-shrink-0">
@@ -141,21 +165,28 @@ const Resume = () => {
                   <p className="opacity-70 mb-1">{item.specialization}</p>
                   <p className="opacity-60 italic text-sm">{item.honor}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
         {/* experience */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-8">Experience</h3>
           <div className="relative">
             {/* vertical line */}
             <div className="absolute left-4 top-0 bottom-0 w-0.5 custom-gradient opacity-60" />
 
             {experience.map((item, index) => (
-              <div
+              <motion.div
                 className="relative flex items-start space-x-6 pb-8"
                 key={index}
+                variants={item}
+                whileHover={{ x: 10 }}
               >
                 {/* timeline dot with icon */}
                 <div className="relative flex-shrink-0">
@@ -177,10 +208,10 @@ const Resume = () => {
                   <p className="opacity-80 mb-2">{item.title}</p>
                   <p className="opacity-60 text-sm">{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* tech stack */}
 
