@@ -224,7 +224,12 @@ const Resume = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 mt-5"
       >
         {/* Tech Stack */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <motion.h3
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -253,7 +258,7 @@ const Resume = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* UI/UX Tools */}
         <motion.div
