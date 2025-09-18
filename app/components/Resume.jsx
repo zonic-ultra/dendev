@@ -216,15 +216,31 @@ const Resume = () => {
       </div>
       {/* tech stack */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 mt-5">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 mt-5"
+      >
         {/* Tech Stack */}
         <div>
-          <h3 className="text-xl md:text-2xl font-bold mb-8">Tech Stack</h3>
+          <motion.h3
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-xl md:text-2xl font-bold mb-8"
+          >
+            Tech Stack
+          </motion.h3>
           <div className="relative">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {techStack.map((icon, index) => (
-                <div
+                <motion.div
                   key={index}
+                  variants={item}
+                  whileHover={{ x: 10 }}
                   className="relative flex items-start space-x-2 pb-3"
                 >
                   <span className="custom-gradient text-sm md:text-2xl">
@@ -233,20 +249,35 @@ const Resume = () => {
                   <span className="text-sm md:text-sm opacity-70">
                     {icon.name}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
 
         {/* UI/UX Tools */}
-        <div>
-          <h3 className="text-xl md:text-2xl font-bold mb-8">UI/UX Tools</h3>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h3
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-xl md:text-2xl font-bold mb-8"
+          >
+            UI/UX Tools
+          </motion.h3>
           <div className="relative">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {uiux.map((uiuxicon, index) => (
-                <div
+                <motion.div
                   key={index}
+                  variants={item}
+                  whileHover={{ x: 10 }}
                   className="relative flex items-start space-x-2 pb-3"
                 >
                   <span className=" custom-gradient text-sm md:text-2xl">
@@ -255,12 +286,12 @@ const Resume = () => {
                   <span className="text-sm md:text-sm opacity-70">
                     {uiuxicon.name}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
