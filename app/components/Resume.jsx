@@ -48,7 +48,8 @@ const Resume = () => {
       year: "March 2025",
       what: (
         <>
-          Freelance <br />
+          Project Collaboration
+          <br />
           Full Stack Java Developer
         </>
       ),
