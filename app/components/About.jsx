@@ -134,7 +134,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            href="/assets/Judens%20Bandal%20Resume.pdf"
+            href="/assets/JUDENS%20BANDAL%20Resume..pdf"
             target="_blank"
             rel="noopener noreferrer"
             className=" custom-gradient py-4 px-8 rounded-full font-semibold flex items-center justify-center gap-2 w-max hover:opacity-90 transition-opacity duration-300 "
