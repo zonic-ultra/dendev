@@ -76,7 +76,7 @@ const NavBar = () => {
           ))}
         </motion.div>
         {/* desktop */}
-        <motion.a
+        {/* <motion.a
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -85,7 +85,7 @@ const NavBar = () => {
         >
           AI
           <SiChatbot className="text-lg" />
-        </motion.a>
+        </motion.a> */}
 
         {/* mobile */}
         <motion.button
@@ -151,7 +151,7 @@ const NavBar = () => {
                 ))}
 
                 {/* ai assistance */}
-                <motion.a
+                {/* <motion.a
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
@@ -161,7 +161,7 @@ const NavBar = () => {
                 >
                   AI
                   <SiChatbot className="text-lg" />
-                </motion.a>
+                </motion.a> */}
               </div>
             </div>
           </motion.div>
