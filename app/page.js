@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -7,6 +8,7 @@ import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Porfolio from "./components/Porfolio";
 import Resume from "./components/Resume";
+import Chatbot from "./Chatbot";
 
 export default function Home() {
   return (
@@ -18,19 +20,7 @@ export default function Home() {
       <Resume />
       <Contact />
       <Footer />
-      {/* <div className="absolute inset-0">
-        <div className="absolute left-1/4 top-0 h-full w-[2px] bg-gradient-to-b from-cyan-400/70 via-transparent to-transparent animate-[glowline_4s_linear_infinite]"></div>
-        <div className="absolute left-2/4 top-0 h-full w-[2px] bg-gradient-to-b from-purple-400/70 via-transparent to-transparent animate-[glowline_6s_linear_infinite]"></div>
-        <div className="absolute left-3/4 top-0 h-full w-[2px] bg-gradient-to-b from-pink-400/70 via-transparent to-transparent animate-[glowline_8s_linear_infinite]"></div>
-      </div>
-      <style>
-        {`
-  @keyframes glowline {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
-  }
-`}
-      </style> */}
+      <Chatbot />
     </div>
   );
 }
