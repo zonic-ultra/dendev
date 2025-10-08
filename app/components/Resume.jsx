@@ -2,7 +2,13 @@ import React from "react";
 import { GiFallingStar, GiUpgrade } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
 
-import { SiMariadb, SiSpringboot, SiCanva } from "react-icons/si";
+import {
+  SiMariadb,
+  SiSpringboot,
+  SiCanva,
+  SiOllama,
+  SiN8N,
+} from "react-icons/si";
 import { RiJavaFill, RiJavascriptLine } from "react-icons/ri";
 import { GrHtml5 } from "react-icons/gr";
 import { DiCss3, DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
@@ -86,6 +92,8 @@ const Resume = () => {
     { icon: <DiPostgresql />, name: "PostgreSQL" },
     { icon: <SiMariadb />, name: "MariaDB" },
     { icon: <FaGitAlt />, name: "Git" },
+    { icon: <SiOllama />, name: "Ollama" },
+    { icon: <SiN8N />, name: "N8N" },
   ];
 
   const uiux = [
