@@ -1,4 +1,6 @@
 import { Syne } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+
 import "./globals.css";
 
 const syne = Syne({
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
         suppressContentEditableWarning={true}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

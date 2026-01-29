@@ -39,7 +39,7 @@ const Portfolio = () => {
       tags: [RiJavaFill, SiTensorflow, SiSqlite, DiIllustrator],
       github:
         "https://github.com/zonic-ultra/Android-based-External-Disease-Identifier", // 🔗 replace with your link
-      live: "https://EXDTECH",
+      live: "https://ItsAndroidAppsorry",
     },
     {
       id: 2,
