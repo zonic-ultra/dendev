@@ -60,7 +60,7 @@ const Resume = () => {
         <>
           -Build an AI Agent in Airtable to automatically extract, enrich, and
           validate business owner names/emails, processing 2,000 leads to
-          complete missing owner dta for each business record.
+          complete missing owner name for each business record.
         </>
       ),
       title2: <>Website Content Updating</>,
