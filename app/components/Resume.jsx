@@ -8,8 +8,13 @@ import {
   SiCanva,
   SiOllama,
   SiN8N,
+  SiFigma,
+  SiAsana,
+  SiClickup,
+  SiGitlab,
+  SiGithub,
 } from "react-icons/si";
-import { RiJavaFill, RiJavascriptLine } from "react-icons/ri";
+import { RiJavaFill, RiJavascriptLine, RiNextjsLine } from "react-icons/ri";
 import { GrHtml5 } from "react-icons/gr";
 import { DiCss3, DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa";
@@ -88,6 +93,7 @@ const Resume = () => {
     { icon: <RiJavaFill />, name: "Java" },
     { icon: <SiSpringboot />, name: "Spring Boot" },
     { icon: <DiReact />, name: "React" },
+    { icon: <RiNextjsLine />, name: "Nextjs" },
     { icon: <RiTailwindCssFill />, name: "Tailwind" },
     { icon: <DiPostgresql />, name: "PostgreSQL" },
     { icon: <SiMariadb />, name: "MariaDB" },
@@ -97,8 +103,16 @@ const Resume = () => {
   ];
 
   const uiux = [
+    { uiuxt: <SiFigma />, name: "Figma" },
     { uiuxt: <DiIllustrator />, name: "Adobe Illustrator" },
     { uiuxt: <SiCanva />, name: "Canva" },
+  ];
+
+  const project_managment = [
+    { project_managment: <SiAsana />, name: "Asana" },
+    { project_managment: <SiClickup />, name: "Clickup" },
+    { project_managment: <SiGitlab />, name: "Gitlab" },
+    { project_managment: <SiGithub />, name: "Github" },
   ];
 
   // const conatiner = {
@@ -381,6 +395,41 @@ const Resume = () => {
                 >
                   <span className=" custom-gradient text-sm md:text-2xl">
                     {uiuxicon.uiuxt}
+                  </span>
+                  <span className="text-sm md:text-sm opacity-70">
+                    {uiuxicon.name}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h3
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-xl md:text-2xl font-bold mb-8"
+          >
+            Project Management
+          </motion.h3>
+          <div className="relative">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {project_managment.map((uiuxicon, index) => (
+                <motion.div
+                  key={index}
+                  variants={item}
+                  whileHover={{ x: 10 }}
+                  className="relative flex items-start space-x-2 pb-3"
+                >
+                  <span className=" custom-gradient text-sm md:text-2xl">
+                    {uiuxicon.project_managment}
                   </span>
                   <span className="text-sm md:text-sm opacity-70">
                     {uiuxicon.name}

@@ -87,17 +87,17 @@ const Portfolio = () => {
             className="rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-black flex flex-col custom-gradient"
           >
             {/* Project Image */}
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
               className="relative overflow-hidden"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-56 md:h-72 object-cover rounded-t-2xl p-2"
-              />
-            </motion.div>
+            > */}
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-56 md:h-72 object-cover rounded-t-2xl p-2"
+            />
+            {/* </motion.div> */}
 
             {/* Project Content */}
             <motion.div
