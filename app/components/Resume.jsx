@@ -48,12 +48,25 @@ const Resume = () => {
 
   const experience = [
     {
-      year: "Jun 2024 - Jan 2025",
-      what: "Capstone Project",
-      title:
-        "Android-based External Disease Identifier for UEP College of Veterinary Medicine Laboratory",
-      description:
-        "-Developed an Android app to identify external dog diseases using a machine learning model, specifically designed for veterinary laboratory use.",
+      year: "Dec 2026",
+      what: (
+        <>
+          Planet Marketing <br />
+          Upwork Freelancer{" "}
+        </>
+      ),
+      title: <>Lead Generation with AI Automation</>,
+      description: (
+        <>
+          -Build an AI Agent in Airtable to automatically extract, enrich, and
+          validate business owner names/emails, processing 2,000 leads to
+          complete missing owner dta for each business record.
+        </>
+      ),
+      title2: <>Website Content Updating</>,
+      description2: (
+        <>-Updating website content into French and Spanish language</>
+      ),
     },
     {
       year: "March 2025",
@@ -77,10 +90,25 @@ const Resume = () => {
           <br />
           -Implement CRUD functionality for managing cellphone parts inventory.
           <br />
-          -Create API documentation for all cellphone part endpoints using
-          Postman. <br />
           -Document all UI forms and corresponding API responses related to
           Cellphone Parts operations.
+        </>
+      ),
+    },
+    {
+      year: "Jun 2024 - Jan 2025",
+      what: "Capstone Project",
+      title:
+        "Android-based External Disease Identifier for UEP College of Veterinary Medicine Laboratory",
+      description: (
+        <>
+          -Developed an Android app to identify external dog diseases. <br />
+          -Trained a machine learning model for disease identification or
+          detection. <br />
+          -Implement real-time image input via camera and gallery for disease
+          detection. <br />
+          -Impelent logic to automatically display treatment suggestions based
+          on the model's disease prediction.
         </>
       ),
     },
@@ -312,9 +340,27 @@ const Resume = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="opacity-60 text-sm"
+                    className="opacity-60 text-sm mb-3"
                   >
                     {item.description}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className="opacity-80 mb-2"
+                  >
+                    {item.title2}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="opacity-60 text-sm"
+                  >
+                    {item.description2}
                   </motion.p>
                 </motion.div>
               </motion.div>
