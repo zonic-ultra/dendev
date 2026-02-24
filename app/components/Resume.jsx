@@ -59,7 +59,7 @@ const Resume = () => {
       description: (
         <>
           -Build an AI Agent in Airtable to automatically extract, enrich, and
-          validate business owner names/emails, processing 2,000 leads to
+          validate business owner names/emails, processing 2,000 plus leads to
           complete missing owner name for each business record.
         </>
       ),
@@ -86,7 +86,8 @@ const Resume = () => {
       description: (
         <>
           -Setting their database using XAMPP .<br />
-          -Adding Feature Branch (Cellphone Parts).
+          Developed and implemented a feature branch for cellphone parts,
+          integrating it into the main codebase after rigorous testing.
           <br />
           -Implement CRUD functionality for managing cellphone parts inventory.
           <br />
@@ -105,9 +106,11 @@ const Resume = () => {
           -Developed an Android app to identify external dog diseases. <br />
           -Trained a machine learning model for disease identification or
           detection. <br />
+          Improved disease detection accuracy by 98%.
+          <br />
           -Implement real-time image input via camera and gallery for disease
           detection. <br />
-          -Impelent logic to automatically display treatment suggestions based
+          -Implement logic to automatically display treatment suggestions based
           on the model's disease prediction.
         </>
       ),

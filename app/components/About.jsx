@@ -94,40 +94,16 @@ const About = () => {
             viewport={{ once: true }}
             className="text-white-600 text-sm leading-relaxed opacity-70"
           >
-            I am a Java developer with a Bachelor of Science in Information
-            Technology from the University of Eastern Philippines. I have
-            experience in web development and API integration using frameworks
-            such as Spring Boot, Hibernate, JPA, and REST. I also have
-            experience with databases such as PostgreSQL, MariaDB, MySQL, and
-            Firebase, a NoSQL database, along with working with APIs and
-            handling JSON. I use Postman for testing APIs and have experience
-            using GitHub for my projects, as well as front-end technologies such
-            as ReactJS, Bootstrap.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-white-600 text-sm leading-relaxed opacity-70"
-          >
-            I have experience in building microservices architectures using
-            Spring Boot and Eureka Server for service discovery. In addition, I
-            have experience in machine learning development, including image
-            recognition using TensorFlow.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-white-600 text-sm leading-relaxed opacity-70"
-          >
-            When working on a project, enhancement, or modification, I like to
-            communicate with my leaders and team to gain a clear understanding
-            of their needs and the project’s vision. Thank you in advance for
-            your time and consideration. I look forward to the opportunity to
-            work with you.
+            I am an aspiring Java Developer with BS Information Technology from
+            University of Eastern Philippines. I specialize in building scalable
+            backend systems, RESTful APIs and microservices using Spring Boot,
+            Hibernate, JPA and JSON handling. Skilled in API testing with
+            Postman and Swagger. Proficient in PostgreSQL, MariaDB, Firebase,
+            GitHub, GitLab, and frontend integration with ReactJS & Next.js.
+            Experienced in AI automation: Airtable AI Agents, n8n custom
+            chatbots, chatbot integrations, SQL AI Agents. I communicate closely
+            with teams and leaders to understand project needs and vision. I am
+            eager to deliver reliable, efficient software solutions.
           </motion.p>
           <motion.a
             initial={{ opacity: 0, y: 20 }}
