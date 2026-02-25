@@ -64,7 +64,7 @@ const Hero = () => {
           variants={item}
           className="text-3xl md:text-5xl font-semibold mt-2"
         >
-          Java Developer{" "}
+          Aspiring Java Developer
           <FaJava className="inline-block text-3xl md:text-5xl font-semibold " />
         </motion.h1>
 

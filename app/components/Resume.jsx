@@ -48,7 +48,7 @@ const Resume = () => {
 
   const experience = [
     {
-      year: "Dec 2026",
+      year: "Dec 2025-Present",
       what: (
         <>
           Planet Marketing <br />
@@ -86,7 +86,7 @@ const Resume = () => {
       description: (
         <>
           -Setting their database using XAMPP .<br />
-          Developed and implemented a feature branch for cellphone parts,
+          -Developed and implemented a feature branch for cellphone parts,
           integrating it into the main codebase after rigorous testing.
           <br />
           -Implement CRUD functionality for managing cellphone parts inventory.
@@ -106,7 +106,7 @@ const Resume = () => {
           -Developed an Android app to identify external dog diseases. <br />
           -Trained a machine learning model for disease identification or
           detection. <br />
-          Improved disease detection accuracy by 98%.
+          -Improved disease detection accuracy by 98%.
           <br />
           -Implement real-time image input via camera and gallery for disease
           detection. <br />
