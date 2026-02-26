@@ -53,7 +53,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Financial Tracker",
-      description: "Fullstack Project",
+      description: "Fullstack Project - ongoing",
       image: "/assets/financialtracker.png",
       tags: [
         RiJavaFill,
