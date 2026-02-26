@@ -50,6 +50,15 @@ const Portfolio = () => {
       github: "https://github.com/zonic-ultra/ems-frontend-react", // 🔗 replace with your link
       live: "https://employee-management-system-blue-five.vercel.app/", // 🔗 replace with your live demo
     },
+    {
+      id: 2,
+      title: "HireBase",
+      description: "Fullstack Project",
+      image: "/assets/hirebase_design.png",
+      tags: [RiJavaFill, SiSpringboot, SiDocker, DiPostgresql, DiReact],
+      github: "https://github.com/zonic-ultra/ems-frontend-react", // 🔗 replace with your link
+      live: "https://employee-management-system-blue-five.vercel.app/", // 🔗 replace with your live demo
+    },
   ];
 
   return (
