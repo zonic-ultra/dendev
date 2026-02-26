@@ -1,6 +1,6 @@
 import React from "react";
-import { RiJavaFill } from "react-icons/ri";
-import { SiDocker, SiSpringboot, SiSqlite } from "react-icons/si";
+import { RiJavaFill, RiNextjsLine } from "react-icons/ri";
+import { SiDocker, SiShadcnui, SiSpringboot, SiSqlite } from "react-icons/si";
 import { DiIllustrator, DiPostgresql, DiReact } from "react-icons/di";
 import { SiTensorflow } from "react-icons/si";
 import { GiFallingStar } from "react-icons/gi";
@@ -51,13 +51,20 @@ const Portfolio = () => {
       live: "https://employee-management-system-blue-five.vercel.app/", // 🔗 replace with your live demo
     },
     {
-      id: 2,
-      title: "HireBase",
+      id: 3,
+      title: "Financila Tracker",
       description: "Fullstack Project",
-      image: "/assets/hirebase_design.png",
-      tags: [RiJavaFill, SiSpringboot, SiDocker, DiPostgresql, DiReact],
-      github: "https://github.com/zonic-ultra/ems-frontend-react", // 🔗 replace with your link
-      live: "https://employee-management-system-blue-five.vercel.app/", // 🔗 replace with your live demo
+      image: "/assets/financialtracker.png",
+      tags: [
+        RiJavaFill,
+        SiSpringboot,
+        SiDocker,
+        DiPostgresql,
+        RiNextjsLine,
+        SiShadcnui,
+      ],
+      github: "https://github.com/zonic-ultra/financial-tracker-app", // 🔗 replace with your link
+      live: "https://financial-tracker-app-eta.vercel.app/", // 🔗 replace with your live demo
     },
   ];
 
