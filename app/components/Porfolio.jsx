@@ -51,8 +51,8 @@ const Portfolio = () => {
       live: "https://employee-management-system-blue-five.vercel.app/", // 🔗 replace with your live demo
     },
     {
-      id: 3,
-      title: "Financila Tracker",
+      id: 3,git 
+      title: "Financial Tracker",
       description: "Fullstack Project",
       image: "/assets/financialtracker.png",
       tags: [
